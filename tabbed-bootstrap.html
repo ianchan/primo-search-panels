@@ -1,176 +1,212 @@
-        <ul class="nav nav-pills responsive" id="myTab">
-          <li class="active"><a href="#primo" data-toggle="tab">OneSearch </a></li>
-          <li><a href="#articles" data-toggle="tab">Articles+ </a></li>
-          <li><a href="#catalog" data-toggle="tab">Books &amp; More</a></li>
-          <li id="csuplus-tab" data-toggle="popover"" data-placement="right" data-content="Get books &amp; more from all the CSU libraries" title="" data-original-title="What's CSU+?" data-trigger="hover"><a href="#csuplus" data-toggle="tab">CSU+</a></li>
-          <li><a href="/reserves">Course Reserves </a></li>
-        </ul>
-        <div class="tab-content responsive">
-          <div class="tab-pane active" id="primo">
-            <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm1" name="primoSearchForm1" role="search" target="_self"  onsubmit="searchPrimo1()" class="form-horizontal">
-              <div class="form-group">
-                <label for="primoQueryTemp1" class="sr-only">OneSearch</label>
-                <input type="hidden" name="institution" value="01CALS_USM"/> 
-                <input type="hidden" name="vid" value="01CALS_USM"/> 
-                <input type="hidden" name="tab" value="everything"/> 
-                <input type="hidden" name="search_scope" value="EVERYTHING"/> 
-                <input type="hidden" name="onCampus" value="false"/> 
-                <input type="hidden" id="primoQuery1" name="query" />
-                <input type="hidden" id="indx" name="indx" value="1"/> 
-                <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
-                <input type="hidden" id="dym" name="dym" value="true"/> 
-                <input type="hidden" id="highlight" name="highlight" value="true"/> 
-                <input type="hidden" id="displayField" name="displayField" value="title"/>
-                <div class="col-xs-9">
-                  <input type="text" size="50" title="search_field" id="primoQueryTemp1" name="queryTemp" class="form-control swap_value form-text form-default-value focusField" value="" />
-                </div>
-                <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo1()"> <i class="fa fa-search"></i> Search</button>
-                <div id="scopeLinks" style="display: none;"></div>
-                <div id="discov-faq-link">
-                  <a href="?width=510&height=280&inline=true#csearch-desc-wrapper" title="What is Discovery Search?" class="colorbox-inline inline">
-                    <i class="fa fa-question-circle fa-lg"><span class="sr-only">What is Discovery Search?</span></i>
-                  </a>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-6">
-                  <div id="article-finder">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/citationlinker?vid=01CALS_USM&lang=en_US">
-                      Looking for a specific article?
-                    </a>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div id="newspaper-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/npsearch?vid=01CALS_USM">Newspapers Search</a>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div id="adv-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=everything&search_scope=EVERYTHING&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="tab-pane" id="articles">
-            <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm2" name="primoSearchForm2" role="search" target="_self"  onsubmit="searchPrimo2()" class="form-horizontal">
-              <div class="form-group">
-                <label for="primoQueryTemp2" class="sr-only">Articles Search</label>
-                <input type="hidden" name="institution" value="01CALS_USM"/> 
-                <input type="hidden" name="vid" value="01CALS_USM"/> 
-                <input type="hidden" name="tab" value="articles"/> 
-                <input type="hidden" name="search_scope" value="PRIMO_CENTRAL"/> 
-                <input type="hidden" name="onCampus" value="false"/> 
-                <input type="hidden" id="primoQuery2" name="query" />
-                <input type="hidden" id="indx" name="indx" value="1"/> 
-                <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
-                <input type="hidden" id="dym" name="dym" value="true"/> 
-                <input type="hidden" id="highlight" name="highlight" value="true"/> 
-                <input type="hidden" id="displayField" name="displayField" value="title"/>
-                <div class="col-xs-9">
-                  <input type="text" size="50" title="search_field" id="primoQueryTemp2" name="queryTemp" class="form-control" value="" />
-                </div>
-                <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo2()"> <i class="fa fa-search"></i> Search</button>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-6">
-                  <div id="article-finder">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/citationlinker?vid=01CALS_USM&lang=en_US">
-                      Looking for a specific article?
-                    </a>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div id="newspaper-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/npsearch?vid=01CALS_USM">Newspapers Search</a>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div id="adv-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=articles&search_scope=PRIMO_CENTRAL&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="tab-pane" id="catalog">
-            <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm3" name="primoSearchForm3" role="search" target="_self"  onsubmit="searchPrimo3()" class="form-horizontal">
-              <div class="form-group">
-                <label for="primoQueryTemp3" class="sr-only">Books+ Search</label>
-                <input type="hidden" name="institution" value="01CALS_USM"/> 
-                <input type="hidden" name="vid" value="01CALS_USM"/> 
-                <input type="hidden" name="tab" value="default_tab"/> 
-                <input type="hidden" name="search_scope" value="01CALS_USM"/> 
-                <input type="hidden" name="mode" value="advanced"/> 
-                <input type="hidden" name="onCampus" value="false"/> 
-                <input type="hidden" id="primoQuery3" name="query" />
-                <input type="hidden" id="indx" name="indx" value="1"/> 
-                <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
-                <input type="hidden" id="dym" name="dym" value="true"/> 
-                <input type="hidden" id="highlight" name="highlight" value="true"/> 
-                <input type="hidden" id="displayField" name="displayField" value="title"/>
-                <div class="col-xs-7">
-                  <input type="text" size="30" title="search_field" id="primoQueryTemp3" name="vl(freeText0)" class="form-control" value="" />
-                </div>
-                <div class="col-xs-3">
-                  <label for="exlidInput_scope_1" class="sr-only">Select a search scope</label>
-                  <select class="EXLSelectTag blue EXLSimpleSearchSelect form-control" id="exlidInput_scope_1" name="vl(155172588UI0)">
-                    <option value="any" id="scope_any1" selected="selected" class="EXLSelectedOption">keyword</option>
-                    <option value="title" id="scope_title1" class="EXLSelectOption">title</option>
-                    <option value="creator" id="scope_creator1" class="EXLSelectOption">author</option>
-                    <option value="sub" id="scope_sub1" class="EXLSelectOption">subject</option>
-                    <option value="lsr04" id="scope_lsr041" class="EXLSelectOption">call#</option>
-                  </select>
-                </div>
-                <div class="">
-                  <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo3()"> <i class="fa fa-search"></i> Search</button>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4 col-md-offset-8">
-                  <div id="browse-search-wrapper">
-                  </div>
-                  <div id="adv-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=default_tab&search_scope=01CALS_USM&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="tab-pane" id="csuplus">
-            <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm4" name="primoSearchForm4" role="search" target="_self"  onsubmit="searchPrimo4()" class="form-horizontal">
-              <div class="form-group">
-                <label for="primoQueryTemp4" class="sr-only">CSU+ Search</label>
-                <input type="hidden" name="institution" value="01CALS_USM"/> 
-                <input type="hidden" name="vid" value="01CALS_USM"/> 
-                <input type="hidden" name="tab" value="csu"/> 
-                <input type="hidden" name="search_scope" value="01CALS"/> 
-                <input type="hidden" name="mode" value="simple"/> 
-                <input type="hidden" name="onCampus" value="false"/> 
-                <input type="hidden" id="primoQuery4" name="query" />
-                <input type="hidden" id="indx" name="indx" value="1"/> 
-                <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
-                <input type="hidden" id="dym" name="dym" value="true"/> 
-                <input type="hidden" id="highlight" name="highlight" value="true"/> 
-                <input type="hidden" id="displayField" name="displayField" value="title"/>
-                <div class="col-xs-10">
-                  <input type="text" size="30" title="search_field" id="primoQueryTemp4" name="vl(freeText0)" class="form-control" value="" />
-                </div>
-                <div class="">
-                  <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo4()"> <i class="fa fa-search"></i> Search</button>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-8">
-                  <div id="csuplus-desc">Get books from other CSU campuses</div>
-                </div>
-                <div class="col-md-4">
-                  <div id="adv-search-wrapper">
-                    <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=csu&search_scope=01CALS&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
-                  </div>
-                </div>
-              </div>
-            </form>
+<!-- Include the following within the <head> tag of your page -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.css" integrity="sha256-oIWMwI/cjhHBz2sP3vyOGSc1DmGqA09eJTpJdZQmtN8=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.css" integrity="sha256-bNPGnNxsIr8mZ4p5VH3uYQorlucOUehl8ml0jm1LZ2I=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- End code for <head> tag -->
+
+<!-- Each function below is connected to a search tab. The functions take the submitted form values and add the appropriate Primo query parameters in order to launch the desired search -->
+<script language="javascript" type="text/javascript">
+function searchPrimo1() {
+  var primoQueryValue1 = jQuery("#primoQueryTemp1").val().replace(/,/g," ");
+  document.getElementById("primoQuery1").value = "any,contains," + primoQueryValue1;
+  document.forms["primoSearchForm1"].submit();
+}
+function searchPrimo2() {
+  var primoQueryValue2 = jQuery("#primoQueryTemp2").val().replace(/,/g," ");
+  document.getElementById("primoQuery2").value = "any,contains," + primoQueryValue2;
+  document.forms["primoSearchForm2"].submit();
+}
+function searchPrimo3() {
+  var primoQueryValue3 = jQuery("#primoQueryTemp3").val().replace(/,/g," ");
+  document.getElementById("primoQuery3").value = document.getElementById("exlidInput_scope_1").value + ",contains," + primoQueryValue3 + ",AND";
+  document.forms["primoSearchForm3"].submit();
+}
+function searchPrimo4() {
+  var primoQueryValue4 = jQuery("#primoQueryTemp4").val().replace(/,/g," ");
+  document.getElementById("primoQuery4").value = "any,contains," + primoQueryValue4;
+  document.forms["primoSearchForm4"].submit();
+}
+</script>
+
+<!-- Tabs -->
+<ul class="nav nav-pills responsive" id="myTab">
+  <li class="active"><a href="#primo" data-toggle="tab">OneSearch </a></li>
+  <li><a href="#articles" data-toggle="tab">Articles+ </a></li>
+  <li><a href="#catalog" data-toggle="tab">Books &amp; More</a></li>
+  <li id="csuplus-tab" data-toggle="popover"" data-placement="right" data-content="Get books &amp; more from all the CSU libraries" title="" data-original-title="What's CSU+?" data-trigger="hover"><a href="#csuplus" data-toggle="tab">CSU+</a></li>
+  <li><a href="/reserves">Course Reserves </a></li>
+</ul>
+
+<!-- The individual tab panes -->
+<div class="tab-content responsive">
+  <div class="tab-pane active" id="primo">
+    <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm1" name="primoSearchForm1" role="search" target="_self"  onsubmit="searchPrimo1()" class="form-horizontal">
+      <div class="form-group">
+        <label for="primoQueryTemp1" class="sr-only">OneSearch</label>
+        <input type="hidden" name="institution" value="01CALS_USM"/> 
+        <input type="hidden" name="vid" value="01CALS_USM"/> 
+        <input type="hidden" name="tab" value="everything"/> 
+        <input type="hidden" name="search_scope" value="EVERYTHING"/> 
+        <input type="hidden" name="onCampus" value="false"/> 
+        <input type="hidden" id="primoQuery1" name="query" />
+        <input type="hidden" id="indx" name="indx" value="1"/> 
+        <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
+        <input type="hidden" id="dym" name="dym" value="true"/> 
+        <input type="hidden" id="highlight" name="highlight" value="true"/> 
+        <input type="hidden" id="displayField" name="displayField" value="title"/>
+        <div class="col-xs-9">
+          <input type="text" size="50" title="search_field" id="primoQueryTemp1" name="queryTemp" class="form-control swap_value form-text form-default-value focusField" value="" />
+        </div>
+        <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo1()"> <i class="fa fa-search"></i> Search</button>
+        <div id="scopeLinks" style="display: none;"></div>
+        <div id="discov-faq-link">
+          <a href="?width=510&height=280&inline=true#csearch-desc-wrapper" title="What is Discovery Search?" class="colorbox-inline inline">
+            <i class="fa fa-question-circle fa-lg"><span class="sr-only">What is Discovery Search?</span></i>
+          </a>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-6">
+          <div id="article-finder">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/citationlinker?vid=01CALS_USM&lang=en_US">
+              Looking for a specific article?
+            </a>
           </div>
         </div>
+        <div class="col-sm-3">
+          <div id="newspaper-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/npsearch?vid=01CALS_USM">Newspapers Search</a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div id="adv-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=everything&search_scope=EVERYTHING&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="tab-pane" id="articles">
+    <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm2" name="primoSearchForm2" role="search" target="_self"  onsubmit="searchPrimo2()" class="form-horizontal">
+      <div class="form-group">
+        <label for="primoQueryTemp2" class="sr-only">Articles Search</label>
+        <input type="hidden" name="institution" value="01CALS_USM"/> 
+        <input type="hidden" name="vid" value="01CALS_USM"/> 
+        <input type="hidden" name="tab" value="articles"/> 
+        <input type="hidden" name="search_scope" value="PRIMO_CENTRAL"/> 
+        <input type="hidden" name="onCampus" value="false"/> 
+        <input type="hidden" id="primoQuery2" name="query" />
+        <input type="hidden" id="indx" name="indx" value="1"/> 
+        <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
+        <input type="hidden" id="dym" name="dym" value="true"/> 
+        <input type="hidden" id="highlight" name="highlight" value="true"/> 
+        <input type="hidden" id="displayField" name="displayField" value="title"/>
+        <div class="col-xs-9">
+          <input type="text" size="50" title="search_field" id="primoQueryTemp2" name="queryTemp" class="form-control" value="" />
+        </div>
+        <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo2()"> <i class="fa fa-search"></i> Search</button>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-6">
+          <div id="article-finder">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/citationlinker?vid=01CALS_USM&lang=en_US">
+              Looking for a specific article?
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div id="newspaper-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/npsearch?vid=01CALS_USM">Newspapers Search</a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div id="adv-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=articles&search_scope=PRIMO_CENTRAL&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="tab-pane" id="catalog">
+    <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm3" name="primoSearchForm3" role="search" target="_self"  onsubmit="searchPrimo3()" class="form-horizontal">
+      <div class="form-group">
+        <label for="primoQueryTemp3" class="sr-only">Books+ Search</label>
+        <input type="hidden" name="institution" value="01CALS_USM"/> 
+        <input type="hidden" name="vid" value="01CALS_USM"/> 
+        <input type="hidden" name="tab" value="default_tab"/> 
+        <input type="hidden" name="search_scope" value="01CALS_USM"/> 
+        <input type="hidden" name="mode" value="advanced"/> 
+        <input type="hidden" name="onCampus" value="false"/> 
+        <input type="hidden" id="primoQuery3" name="query" />
+        <input type="hidden" id="indx" name="indx" value="1"/> 
+        <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
+        <input type="hidden" id="dym" name="dym" value="true"/> 
+        <input type="hidden" id="highlight" name="highlight" value="true"/> 
+        <input type="hidden" id="displayField" name="displayField" value="title"/>
+        <div class="col-xs-7">
+          <input type="text" size="30" title="search_field" id="primoQueryTemp3" name="vl(freeText0)" class="form-control" value="" />
+        </div>
+        <div class="col-xs-3">
+          <label for="exlidInput_scope_1" class="sr-only">Select a search scope</label>
+          <select class="EXLSelectTag blue EXLSimpleSearchSelect form-control" id="exlidInput_scope_1" name="vl(155172588UI0)">
+            <option value="any" id="scope_any1" selected="selected" class="EXLSelectedOption">keyword</option>
+            <option value="title" id="scope_title1" class="EXLSelectOption">title</option>
+            <option value="creator" id="scope_creator1" class="EXLSelectOption">author</option>
+            <option value="sub" id="scope_sub1" class="EXLSelectOption">subject</option>
+            <option value="lsr04" id="scope_lsr041" class="EXLSelectOption">call#</option>
+          </select>
+        </div>
+        <div class="">
+          <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo3()"> <i class="fa fa-search"></i> Search</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4 col-md-offset-8">
+          <div id="browse-search-wrapper">
+          </div>
+          <div id="adv-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=default_tab&search_scope=01CALS_USM&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="tab-pane" id="csuplus">
+    <form action="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?"  enctype="application/x-www-form-urlencoded; charset=utf-8" method="get" id="primoSearchForm4" name="primoSearchForm4" role="search" target="_self"  onsubmit="searchPrimo4()" class="form-horizontal">
+      <div class="form-group">
+        <label for="primoQueryTemp4" class="sr-only">CSU+ Search</label>
+        <input type="hidden" name="institution" value="01CALS_USM"/> 
+        <input type="hidden" name="vid" value="01CALS_USM"/> 
+        <input type="hidden" name="tab" value="csu"/> 
+        <input type="hidden" name="search_scope" value="01CALS"/> 
+        <input type="hidden" name="mode" value="simple"/> 
+        <input type="hidden" name="onCampus" value="false"/> 
+        <input type="hidden" id="primoQuery4" name="query" />
+        <input type="hidden" id="indx" name="indx" value="1"/> 
+        <input type="hidden" id="bulkSize" name="bulkSize" value="20"/> 
+        <input type="hidden" id="dym" name="dym" value="true"/> 
+        <input type="hidden" id="highlight" name="highlight" value="true"/> 
+        <input type="hidden" id="displayField" name="displayField" value="title"/>
+        <div class="col-xs-10">
+          <input type="text" size="30" title="search_field" id="primoQueryTemp4" name="vl(freeText0)" class="form-control" value="" />
+        </div>
+        <div class="">
+          <button type="button" title="Search" class="btn btn-info" id="goButton" value="Search" name="primosearch" onclick="searchPrimo4()"> <i class="fa fa-search"></i> Search</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-8">
+          <div id="csuplus-desc">Get books from other CSU campuses</div>
+        </div>
+        <div class="col-md-4">
+          <div id="adv-search-wrapper">
+            <a href="https://csusm-primo.hosted.exlibrisgroup.com/primo-explore/search?tab=csu&search_scope=01CALS&sortby=rank&vid=01CALS_USM&lang=en_US&mode=advanced">Advanced Search</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
